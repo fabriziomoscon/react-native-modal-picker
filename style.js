@@ -32,7 +32,6 @@ export default StyleSheet.create({
     },
 
     selectStyle: {
-        flex: 1,
         borderColor: '#ccc',
         borderWidth: 1,
         padding: PADDING,
