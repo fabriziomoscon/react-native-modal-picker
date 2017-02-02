@@ -1,5 +1,7 @@
 [![npm version](https://badge.fury.io/js/react-native-modal-picker.svg)](https://badge.fury.io/js/react-native-modal-picker)
 
+This fork tries to keep [updated with the PRs](MERGED_PR.md) submitted but not accepted to upstream.
+
 # react-native-modal-picker
 A cross-platform (iOS / Android), selector/picker component for React Native that is highly customizable and supports sections.
 
