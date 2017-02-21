@@ -34,7 +34,8 @@ const propTypes = {
     cancelTextStyle: Text.propTypes.style,
     overlayStyle: View.propTypes.style,
     optionContainer: View.propTypes.style,
-    cancelText: PropTypes.string
+    cancelText: PropTypes.string,
+    scrollProps: PropTypes.object,
 };
 
 const defaultProps = {
@@ -51,7 +52,10 @@ const defaultProps = {
     cancelTextStyle: {},
     overlayStyle: {},
     optionContainer: {},
-    cancelText: 'cancel'
+    cancelText: 'cancel',
+    scrollProps: {
+        keyboardShouldPersistTaps: 'always',
+    },
 };
 
 export default class ModalPicker extends BaseComponent {
@@ -134,7 +138,7 @@ export default class ModalPicker extends BaseComponent {
         return (
             <View style={[styles.overlayStyle, this.props.overlayStyle]} key={'modalPicker'+(componentIndex++)}>
                 <View style={[styles.optionContainer, this.props.optionContainer]}>
-                    <ScrollView keyboardShouldPersistTaps>
+                    <ScrollView {...this.props.scrollProps}>
                         <View style={{paddingHorizontal:10}}>
                             {options}
                         </View>
