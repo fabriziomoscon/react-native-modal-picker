@@ -36,6 +36,7 @@ const propTypes = {
     optionContainer: View.propTypes.style,
     cancelText: PropTypes.string,
     scrollProps: PropTypes.object,
+    flexProps: View.propTypes.style
 };
 
 const defaultProps = {
@@ -56,6 +57,7 @@ const defaultProps = {
     scrollProps: {
         keyboardShouldPersistTaps: 'always',
     },
+    flexProps: {}
 };
 
 export default class ModalPicker extends BaseComponent {
@@ -178,7 +180,7 @@ export default class ModalPicker extends BaseComponent {
         return (
             <View style={this.props.style}>
                 {dp}
-                <TouchableOpacity onPress={this.open}>
+                <TouchableOpacity style={this.props.flexProps} onPress={this.open}>
                     {this.renderChildren()}
                 </TouchableOpacity>
             </View>
