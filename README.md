@@ -12,7 +12,7 @@ A cross-platform (iOS / Android), selector/picker component for React Native tha
 ## Install
 
 ```sh
-npm i react-native-modal-picker --save
+yarn add @fabriziomoscon/react-native-modal-picker
 ```
 
 ## Usage
